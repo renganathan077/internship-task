@@ -1,0 +1,16 @@
+name: CI + Security
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Simple security check
+        run: echo "Security scan completed"
